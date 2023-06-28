@@ -1,0 +1,148 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.fondo {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 210px;
+    background-image: url(imagen/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 300px;
+
+}
+
+header {
+    background-color: #333;
+    color: white;
+}
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+header nav li a {
+    color: white;
+    padding: 15px;
+    display: block;
+    text-decoration: none;
+}
+header nav li a:hover {
+    background-color: #111;
+}
+h1 {
+    margin-top: 100px;
+    font-size: 50px;
+    text-align: center;
+    color: orangered;
+    width: 100%;
+    height: 100px;
+}
+
+.rg {
+    margin-top: 0;
+}
+.FC {
+    margin-top: 100px;
+    font-size: 50px;
+    text-align: center;
+    color: red;
+    width: 100%;
+    height: 100px;
+    
+}
+.h1animacion {
+    margin-top: 100px;
+    font-size: 50px;
+    text-align: center;
+    color: orangered;
+    width: 100%;
+    height: 100px;
+}
+/* Estilos para la galería */
+.animacion {
+    padding: 8px;
+    display:flexbox;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.animacion video {
+    margin-top: 50px;
+    margin-bottom: 250px;
+    width: 100%;
+    height:500px;
+  }
+
+/* Estilos para la galería */
+.gallery {
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 50px;
+}
+.gallery img {
+    max-width:100%;
+}
+
+.video {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+.video video {
+    width: 100%;
+}
+
+/* Estilos para el slider */
+.slider {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    display: none;
+}
+.slider img {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+.slider-button {
+    position:absolute;
+    top:50%;
+transform:translateY(-50%);
+background:none;
+border:none;
+color:white;
+font-size:2rem;
+cursor:pointer; 
+outline:none; 
+}
+#prev-button{
+left :5%;
+}
+#next-button{
+right :5%;
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+   header nav ul{
+       flex-direction : column; 
+   }
+   header nav li a{
+       text-align:center; 
+   }
+   .animacion {
+    flex-direction: column;
+   }
+}

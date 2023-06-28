@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Galería Vanessa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Favoritas.html">Animaciones</a></li>
+                <li><a href="MiRegaloEspecial.html">Feliz Cumpleaños</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Galeria de imagenes</h1>
+        <div class="gallery">
+            <img src="imagen/1687829751406.jpg" alt="">
+            <img src="imagen/1687829751420.jpg" alt="">
+            <img src="imagen/1687829751432.jpg" alt="">
+            <img src="imagen/1687829751448.jpg" alt="">
+            <img src="imagen/1687829751461.jpg" alt="">
+            <img src="imagen/1687829751476.jpg" alt="">
+            <img src="imagen/1687829751489.jpg" alt="">
+            <img src="imagen/1687829751504.jpg" alt="">
+            <img src="imagen/1687829751521.jpg" alt="">
+            <img src="imagen/1687829751538.jpg" alt="">
+            <img src="imagen/1687829751555.jpg" alt="">
+            <img src="imagen/1687829751576.jpg" alt="">
+            <img src="imagen/1687829751593.jpg" alt="">
+            <img src="imagen/1687829751611.jpg" alt="">
+            <img src="imagen/1687829751644.jpg" alt="">
+            <img src="imagen/1687829751657.jpg" alt="">
+            <!-- Agregar más imágenes aquí -->
+        </div>
+        <div class="slider" id="slider">
+            <button class="slider-button" id="prev-button">❮</button>
+            <img src="" alt="" id="slider-image">
+            <button class="slider-button" id="next-button">❯</button>
+        </div>
+    </main>
+    <script src="scrip.js"></script>
+</body>
+</html>
+<!--Para enlazar tu galería de imágenes a una base de datos en Firebase, primero debes crear un proyecto de Firebase y registrar tu aplicación web con ese proyecto. Luego, puedes instalar el SDK de Firebase para JavaScript e inicializar Firebase en tu aplicación web 1.
+
+Una vez que hayas configurado Firebase en tu aplicación web, puedes utilizar uno de los servicios de almacenamiento de datos de Firebase, como Cloud Firestore o Realtime Database, para almacenar y recuperar las imágenes de la galería.
+
+Por ejemplo, podrías almacenar las imágenes en Cloud Storage para Firebase y guardar las URL de descarga de las imágenes en Cloud Firestore. Luego, podrías recuperar las URL de las imágenes desde Cloud Firestore y mostrarlas en la galería utilizando JavaScript.
+
+Aquí tienes un ejemplo básico de cómo podrías hacerlo:
+
+// Importar los módulos necesarios de Firebase
+import { initializeApp } from 'firebase/app';
+import { getFirestore, collection, getDocs } from 'firebase/firestore';
+
+// Inicializar Firebase con la configuración de tu proyecto
+const firebaseConfig = {
+  // ...
+};
+const app = initializeApp(firebaseConfig);
+
+// Obtener una referencia a la base de datos de Cloud Firestore
+const db = getFirestore(app);
+
+// Obtener una referencia a la colección donde se almacenan las URL de las imágenes
+const imagesCollection = collection(db, 'images');
+
+// Función para cargar las imágenes desde Cloud Firestore y mostrarlas en la galería
+async function loadImages() {
+  // Obtener todas las imágenes desde Cloud Firestore
+  const imagesSnapshot = await getDocs(imagesCollection);
+  const images = imagesSnapshot.docs.map(doc => doc.data());
+
+  // Mostrar las imágenes en la galería
+  const galleryElement = document.querySelector('.gallery');
+  for (const image of images) {
+    const imgElement = document.createElement('img');
+    imgElement.src = image.url;
+    galleryElement.appendChild(imgElement);
+  }
+}
+
+// Cargar las imágenes al cargar la página
+loadImages();
+Este código muestra cómo podrías utilizar el SDK de Firebase para JavaScript para recuperar las URL de las imágenes desde una colección en Cloud Firestore y mostrarlas en la galería utilizando JavaScript.-->
